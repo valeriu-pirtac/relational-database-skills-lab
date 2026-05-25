@@ -1,0 +1,35 @@
+# Ruff configuration
+target-version = "py313"
+include = ["*.py", "*.pyi"]
+exclude = [
+    "__pycache__",
+    ".venv",
+    ".git",
+    "node_modules",
+    "dist",
+    "build",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+    "htmlcov",
+]
+line-length = 120
+indent-width = 4
+
+[lint]
+select = ["E", "W", "F", "I", "N", "UP", "B", "C4", "T10", "PT"]
+ignore = ["E501", "E203"]
+
+[lint.isort]
+known-first-party = ["src"]
+lines-after-imports = 2
+
+[lint.per-file-ignores]
+
+[lint.flake8-pytest-style]
+parametrize-names-type = "csv"
+parametrize-values-row-type = "tuple"
+parametrize-values-type = "list"
+
+[format]
+quote-style = "double"
