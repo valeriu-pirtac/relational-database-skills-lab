@@ -1,0 +1,17 @@
+[project]
+name = "relationship-loading"
+version = "0.1.0"
+description = "PostgreSQL & SQLAlchemy Relationship Loading Strategies lab: N+1 queries, joinedload, selectinload, subqueryload, and FastAPI AsyncSession integration with Pydantic serialization."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "asyncpg>=0.29.0",
+    "python-dotenv>=1.0.0",
+    "faker>=40.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "httpx>=0.27.0",
+]
