@@ -10,6 +10,7 @@ schema-version = "1.12.0"
 uv.pkg-path = "uv"
 python313.pkg-path = "python313"
 gcc.pkg-path = "gcc"
+greenlet.pkg-path = "python313Packages.greenlet"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 

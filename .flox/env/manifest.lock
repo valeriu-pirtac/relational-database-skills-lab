@@ -6,6 +6,9 @@
       "gcc": {
         "pkg-path": "gcc"
       },
+      "greenlet": {
+        "pkg-path": "python313Packages.greenlet"
+      },
       "python313": {
         "pkg-path": "python313"
       },
@@ -143,6 +146,126 @@
         "info": "/nix/store/5b0hplrl0n9g159mcis4jca1fjd4822a-gcc-wrapper-15.2.0-info",
         "man": "/nix/store/r35yg8h1w630r3lmnyglwhv5nvk284mx-gcc-wrapper-15.2.0-man",
         "out": "/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.greenlet",
+      "broken": false,
+      "derivation": "/nix/store/j02jxjv8b10spzlqnysa5225ncswlhaj-python3.13-greenlet-3.3.0.drv",
+      "description": "Module for lightweight in-process concurrent programming",
+      "install_id": "greenlet",
+      "license": "[ Python-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "name": "python3.13-greenlet-3.3.0",
+      "pname": "greenlet",
+      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "rev_count": 1004030,
+      "rev_date": "2026-05-23T18:24:25Z",
+      "scrape_date": "2026-05-26T07:06:49.675754Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/q22v4r1pfapl1dyvd14zigfwqy279ycx-python3.13-greenlet-3.3.0-dist",
+        "out": "/nix/store/pd7ag0im3hshmljxh7jqd9rmsgws6k14-python3.13-greenlet-3.3.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.greenlet",
+      "broken": false,
+      "derivation": "/nix/store/zsslaz74ch6mksz48ah3pz3s6zw3snjs-python3.13-greenlet-3.3.0.drv",
+      "description": "Module for lightweight in-process concurrent programming",
+      "install_id": "greenlet",
+      "license": "[ Python-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "name": "python3.13-greenlet-3.3.0",
+      "pname": "greenlet",
+      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "rev_count": 1004030,
+      "rev_date": "2026-05-23T18:24:25Z",
+      "scrape_date": "2026-05-26T07:35:36.039210Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/apnd1cwmwmi4ms6rmblnmfksazn3f3n6-python3.13-greenlet-3.3.0-dist",
+        "out": "/nix/store/dv26bl2f4dmllhjv0s9lbn8xqrv6fbp9-python3.13-greenlet-3.3.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.greenlet",
+      "broken": false,
+      "derivation": "/nix/store/yy0ddq044dvdzaisk559z9qcf3zv3czx-python3.13-greenlet-3.3.0.drv",
+      "description": "Module for lightweight in-process concurrent programming",
+      "install_id": "greenlet",
+      "license": "[ Python-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "name": "python3.13-greenlet-3.3.0",
+      "pname": "greenlet",
+      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "rev_count": 1004030,
+      "rev_date": "2026-05-23T18:24:25Z",
+      "scrape_date": "2026-05-26T08:02:58.634092Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/h76m23c96xiys35sxsjab0hldqmc01xl-python3.13-greenlet-3.3.0-dist",
+        "out": "/nix/store/2acbb13lxffcqkn5gndxsliwx5pnvgh6-python3.13-greenlet-3.3.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.greenlet",
+      "broken": false,
+      "derivation": "/nix/store/p062ijkzykh2pyhcq1jhhbqlrsx2p8pi-python3.13-greenlet-3.3.0.drv",
+      "description": "Module for lightweight in-process concurrent programming",
+      "install_id": "greenlet",
+      "license": "[ Python-2.0, MIT ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "name": "python3.13-greenlet-3.3.0",
+      "pname": "greenlet",
+      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "rev_count": 1004030,
+      "rev_date": "2026-05-23T18:24:25Z",
+      "scrape_date": "2026-05-26T08:34:01.188096Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "3.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/nxls6wjk02y6xv8bi5mx16kajiqg4x9x-python3.13-greenlet-3.3.0-dist",
+        "out": "/nix/store/yv89rc74ad8yd1kfmx3l7yk7v19mq223-python3.13-greenlet-3.3.0"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
