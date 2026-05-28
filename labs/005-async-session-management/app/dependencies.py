@@ -5,7 +5,7 @@ from collections.abc import AsyncGenerator
 from loguru import logger
 from sqlalchemy import create_engine, event
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 from app.config import ASYNC_DATABASE_URL, DATABASE_URL
 
@@ -16,7 +16,6 @@ logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
 # Sync database setup (for initialization)
 engine = create_engine(DATABASE_URL, pool_size=5, max_overflow=10, pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-db_session = scoped_session(SessionLocal)
 
 # Async database setup (FastAPI)
 async_engine = create_async_engine(ASYNC_DATABASE_URL, pool_size=5, max_overflow=10, pool_pre_ping=True)
