@@ -159,7 +159,7 @@ class RoomBooking(Base):
     booking_period = Column(TSTZRANGE, nullable=False)
 
     # Array of strings to store amenities/tags
-    amenities = Column(ARRAY(String), nullable=False)
+    amenities: Column = Column(ARRAY(String), nullable=False)
 
     __table_args__ = (
         # Exclusion Constraint: Prevent overlapping bookings (&&) for the same room (=)

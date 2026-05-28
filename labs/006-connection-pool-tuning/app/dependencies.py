@@ -54,24 +54,25 @@ def get_custom_engine(
     complete with event logging listeners.
     """
     if is_async:
-        engine = create_async_engine(
+        async_engine = create_async_engine(
             ASYNC_DATABASE_URL,
             pool_size=pool_size,
             max_overflow=max_overflow,
             pool_pre_ping=pool_pre_ping,
             pool_timeout=pool_timeout,
         )
-        register_pool_listeners(engine.sync_engine.pool)
+        register_pool_listeners(async_engine.sync_engine.pool)
+        return async_engine
     else:
-        engine = create_engine(
+        sync_engine = create_engine(
             DATABASE_URL,
             pool_size=pool_size,
             max_overflow=max_overflow,
             pool_pre_ping=pool_pre_ping,
             pool_timeout=pool_timeout,
         )
-        register_pool_listeners(engine.pool)
-    return engine
+        register_pool_listeners(sync_engine.pool)
+        return sync_engine
 
 
 def init_db() -> None:

@@ -63,7 +63,11 @@ format-check: ## Check code formatting without modifying files
 
 type-check: ## Run mypy type checker
 	@echo "$(GREEN)==> Running mypy type checker...$(NC)"
-	$(FLOX) $(UV) run mypy $(SRC_DIR)
+	@for dir in labs/*; do \
+		if [ -d "$$dir/app" ]; then \
+			MYPYPATH=$$dir $(FLOX) $(UV) run mypy --explicit-package-bases $$dir/app || exit 1; \
+		fi; \
+	done
 
 check: format-check lint type-check ## Run all code quality checks (format, lint, type)
 

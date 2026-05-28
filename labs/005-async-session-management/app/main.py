@@ -127,8 +127,8 @@ async def transfer_funds_safe(payload: TransferRequest, db: AsyncSession = Depen
         await asyncio.sleep(0.1)
 
         # Apply transfer
-        from_acc.balance -= payload.amount
-        to_acc.balance += payload.amount
+        from_acc.balance -= payload.amount  # type: ignore
+        to_acc.balance += payload.amount  # type: ignore
 
         # Flush changes
         await db.flush()
@@ -141,8 +141,8 @@ async def transfer_funds_safe(payload: TransferRequest, db: AsyncSession = Depen
             status="success",
             message="Transfer completed successfully.",
             amount=payload.amount,
-            from_balance=from_acc.balance,
-            to_balance=to_acc.balance,
+            from_balance=from_acc.balance,  # type: ignore
+            to_balance=to_acc.balance,  # type: ignore
         )
 
 
@@ -183,8 +183,8 @@ async def transfer_funds_leaked(payload: TransferRequest, db: AsyncSession = Dep
     await asyncio.sleep(0.2)
 
     # 3. Apply transfer
-    from_acc.balance -= payload.amount
-    to_acc.balance += payload.amount
+    from_acc.balance -= payload.amount  # type: ignore
+    to_acc.balance += payload.amount  # type: ignore
 
     # Commit the shared session
     await db.commit()
@@ -197,6 +197,6 @@ async def transfer_funds_leaked(payload: TransferRequest, db: AsyncSession = Dep
         status="success",
         message="Leaked transfer completed successfully (may contain silent balance corruption).",
         amount=payload.amount,
-        from_balance=from_acc.balance,
-        to_balance=to_acc.balance,
+        from_balance=from_acc.balance,  # type: ignore
+        to_balance=to_acc.balance,  # type: ignore
     )

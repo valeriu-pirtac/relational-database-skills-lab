@@ -55,7 +55,7 @@ def run_concurrent_slow_requests() -> None:
     # Analyze outcomes
     success_count = 0
     failure_count = 0
-    error_types = {}
+    error_types: dict[str, int] = {}
 
     for status_code, body in responses:
         if status_code == 200:
