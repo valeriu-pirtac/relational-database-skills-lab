@@ -1,0 +1,17 @@
+[project]
+name = "pydantic-serialization-type-constraints"
+version = "0.1.0"
+description = "SQLAlchemy 2.0 & Application Integration (FastAPI & Pydantic) lab: Pydantic v2 Serialization, Type Constraints, and JSONB dynamic validation."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "asyncpg>=0.29.0",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "httpx>=0.27.0",
+    "pydantic[email]>=2.6.0",
+]

@@ -1,4 +1,4 @@
-.PHONY: help setup install install-dev clean clean-cache lint format format-check type-check check shell info deps-outdated lock mvcc-internals
+.PHONY: help setup install install-dev clean clean-cache lint format format-check type-check check shell info deps-outdated lock
 
 # Variables
 PROJECT_NAME := "Relational Database Skills To Master Practical Labs"
@@ -78,14 +78,6 @@ check: format-check lint type-check ## Run all code quality checks (format, lint
 shell: ## Start Python shell with project context
 	@echo "$(GREEN)==> Starting Python shell...$(NC)"
 	$(FLOX) $(UV) run python
-
-##################
-##@ Practical Labs
-##################
-
-mvcc-internals: ## Run the MVCC Internals lab bootstrap script
-	@echo "$(GREEN)==> Running MVCC Internals Lab...$(NC)"
-	$(FLOX) $(UV) run labs/001-mvcc-internals/main.py
 
 ##################
 ##@ Cleanup

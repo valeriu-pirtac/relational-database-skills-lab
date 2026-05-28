@@ -111,12 +111,12 @@ You must be able to read the database's mind. A senior engineer does not guess w
     - Activating and querying `pg_stat_statements` to find the most expensive queries by total execution time or resource consumption.
     - Querying `pg_stat_activity` to diagnose active locks, blocked queries, and connection states.
 
-| Scan Type       | Cache Friendly? | Cost Profile  | Best Used For                                                          |
-| --------------- | --------------- | ------------- | ---------------------------------------------------------------------- |
-| INdex Only Scan | YES             | Extremely Low | Queries where all requested columns are part of the index itself.      |
-| Index Scan      | YES             | Low           | Fetching a small subset of rows from a large table.                    |
-| Bitmap Scan     | Yes             | Medium        | Combining multiple conditions with indexes before pulling data blocks. |
-| Seq Scan        | NO              | High          | Reading a significant percentage of the table or missing index         |
+| Scan Type      | Cache Friendly? | Cost Profile  | Best Used For                                                          |
+| -------------- | --------------- | ------------- | ---------------------------------------------------------------------- |
+| Idex Only Scan | YES             | Extremely Low | Queries where all requested columns are part of the index itself.      |
+| Index Scan     | YES             | Low           | Fetching a small subset of rows from a large table.                    |
+| Bitmap Scan    | Yes             | Medium        | Combining multiple conditions with indexes before pulling data blocks. |
+| Seq Scan       | NO              | High          | Reading a significant percentage of the table or missing index         |
 
 ## 4. AWS RDS PostgreSQL Infrastructure & Reliability
 
