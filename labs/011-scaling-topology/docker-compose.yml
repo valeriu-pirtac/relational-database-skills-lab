@@ -1,0 +1,48 @@
+services:
+  postgres_primary:
+    image: postgres:17-alpine
+    container_name: postgres_primary
+    ports:
+      - "127.0.0.1:${PRIMARY_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      REPLICATION_USER: ${REPLICATION_USER}
+      REPLICATION_PASSWORD: ${REPLICATION_PASSWORD}
+    volumes:
+      - ./scripts/init-primary.sh:/docker-entrypoint-initdb.d/init-primary.sh:ro
+      - pgdata_primary:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+
+  postgres_replica:
+    image: postgres:17-alpine
+    container_name: postgres_replica
+    ports:
+      - "127.0.0.1:${REPLICA_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      REPLICATION_USER: ${REPLICATION_USER}
+      REPLICATION_PASSWORD: ${REPLICATION_PASSWORD}
+    volumes:
+      - ./scripts/init-replica.sh:/usr/local/bin/init-replica.sh:ro
+      - pgdata_replica:/var/lib/postgresql/data
+    entrypoint: ["/bin/sh", "/usr/local/bin/init-replica.sh"]
+    depends_on:
+      postgres_primary:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata_primary:
+  pgdata_replica:
