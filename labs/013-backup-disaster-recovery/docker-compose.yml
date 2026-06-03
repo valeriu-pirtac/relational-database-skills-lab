@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - pgdata_disaster:/var/lib/postgresql/data
+      - pgarchive_disaster:/var/lib/postgresql/archive
+      - pgbackups_disaster:/var/lib/postgresql/backups
+    entrypoint: [
+      "sh", "-c",
+      "mkdir -p /var/lib/postgresql/archive /var/lib/postgresql/backups && chown -R postgres:postgres /var/lib/postgresql/archive /var/lib/postgresql/backups && exec docker-entrypoint.sh postgres -c wal_level=replica -c archive_mode=on -c archive_command='test ! -f /var/lib/postgresql/archive/%f && cp %p /var/lib/postgresql/archive/%f' -c restore_command='cp /var/lib/postgresql/archive/%f %p'"
+    ]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata_disaster:
+  pgarchive_disaster:
+  pgbackups_disaster:
