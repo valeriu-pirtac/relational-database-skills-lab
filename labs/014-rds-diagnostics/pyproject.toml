@@ -1,0 +1,12 @@
+[project]
+name = "014-rds-diagnostics"
+version = "0.1.0"
+description = "RDS Diagnostics: Performance Insights (AAS) and CloudWatch metrics simulation"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.2.2",
+]
