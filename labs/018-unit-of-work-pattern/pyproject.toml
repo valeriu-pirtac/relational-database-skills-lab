@@ -1,0 +1,12 @@
+[project]
+name = "018-unit-of-work-pattern"
+version = "0.1.0"
+description = "Mastering SQLAlchemy Unit of Work Lifecycle"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.2.2",
+]
