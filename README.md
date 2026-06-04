@@ -15,31 +15,32 @@ This roadmap details the essential database skills required for production-ready
 ```mermaid
 mindmap
   root(Senior DB Engineer)
-    PostgreSQL Under the Hood
+    Advanced Database Design & PostgreSQL Internals
       MVCC & Dead Tuples
       Autovacuum Tuning
-      Locks & Concurrency
-      Isolation Levels
+      Transaction Isolation Levels
+      Advanced Indexing
+      Complex Data Types (JSONB, UUIDv7)
     SQLAlchemy & Application Layer
-      Async vs Sync Architecture
       Relationship Loading Strategies
+      Async Session Management
       Connection Pool Tuning
+      Pydantic Serialization & Data Mapping
       Unit of Work Lifecycle
-    Query Performance
-      EXPLAIN ANALYZE
-      Indexing Strategies
-      pg_stat_statements
-      Query Execution Engines
-    AWS RDS Operations
-      Multi-AZ vs Read Replicas
-      RDS Proxy
-      PITR & Snapshots
-      Performance Insights
-    Schema Evolution
-      Zero-Downtime Migrations
-      Alembic Lock Management
-      JSONB vs Normalization
-      Pydantic Data Mapping
+    Query Performance & Diagnostics
+      EXPLAIN ANALYZE & Buffers
+      Advanced Locking Mechanics
+      Production Observability
+      Query Execution Engines & JIT
+    AWS RDS Infrastructure
+      Scaling & Topology
+      Connection Multiplexing
+      Backup & Disaster Recovery
+      RDS Diagnostics
+    Schema Evolution & Migrations
+      Alembic Lock Mitigation
+      Safe vs Unsafe Operations
+      Renaming Columns & Tables
 ```
 
 ## 1. Advanced Database Design & PostgreSQL Internals
@@ -52,6 +53,7 @@ A senior engineer designs schemas with execution plans, locking behavior, and ha
     - How PostgreSQL handles updates and deletes under the hood (creating new row versions rather than in-place updates).
     - The nature of **Dead Tuples** and how **bloat** affects sequential scans and index size.
     - **Autovacuum Tuning**: Modifying `autovacuum_vacuum_scale_factor`, `autovacuum_vacuum_threshold`, and `vacuum_cost_limit` for write-heavy tables to prevent performance degradation.
+    - **Transaction Isolation Levels**: Understanding `Read Committed` vs `Repeatable Read` vs `Serializable` to prevent anomalies like non-repeatable reads and write skew.
 - **Advanced Indexing (Beyond B-Trees)**:
     - **GIN (Generalized Inverted Index)**: Crucial for indexing **JSONB** documents and **full-text search**.
     - **BRIN (Block Range Index)**: Extremely useful for massive, **naturally ordered datasets** (e.g., timeseries data or log tables) to save disk space.
@@ -87,6 +89,9 @@ Bridging the gap between Python's object-oriented nature and relational database
     - Using `model_validate(db_obj, from_attributes=True)` to convert ORM objects efficiently.
     - Decoupling schemas: Separate Pydantic schemas for **Request**, **Response**, and **Database representation**.
     - Validating complex JSONB columns dynamically in Python before persisting.
+- **Unit of Work Lifecycle**:
+    - Using the Unit of Work pattern to group operations logically and ensure atomic commits.
+    - Properly managing state changes in SQLAlchemy's identity map before a flush.
 
 > **WARNING**
 >
@@ -110,6 +115,9 @@ You must be able to read the database's mind. A senior engineer does not guess w
 - **Production Observability**:
     - Activating and querying `pg_stat_statements` to find the most expensive queries by total execution time or resource consumption.
     - Querying `pg_stat_activity` to diagnose active locks, blocked queries, and connection states.
+- **Query Execution Engines & JIT**:
+    - Understanding the PostgreSQL executor pipeline and node evaluation.
+    - When JIT (Just-In-Time) compilation is triggered and how to disable it for OLTP workloads.
 
 | Scan Type      | Cache Friendly? | Cost Profile  | Best Used For                                                          |
 | -------------- | --------------- | ------------- | ---------------------------------------------------------------------- |
