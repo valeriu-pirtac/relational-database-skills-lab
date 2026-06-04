@@ -1,0 +1,14 @@
+[project]
+name = "023-pgvector-ai-workloads"
+version = "0.1.0"
+description = "Mastering pgvector and HNSW Indexing"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.7.2",
+    "sqlalchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.2.2",
+    "pgvector>=0.2.5",
+    "numpy>=1.26.0",
+]

@@ -9,6 +9,9 @@
       "greenlet": {
         "pkg-path": "python313Packages.greenlet"
       },
+      "numpy": {
+        "pkg-path": "python313Packages.numpy"
+      },
       "python313": {
         "pkg-path": "python313"
       },
@@ -24,17 +27,17 @@
     {
       "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/kcf5kgkcjq1lj82sdwb51yz1b6cvrkgm-gcc-wrapper-15.2.0.drv",
+      "derivation": "/nix/store/nqiayifqz3bwrf26qbzr9472wdbgw8gm-gcc-wrapper-15.2.0.drv",
       "description": "GNU Compiler Collection, version 15.2.0 (wrapper script)",
       "install_id": "gcc",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "gcc-wrapper-15.2.0",
       "pname": "gcc",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:06:03.753221Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T08:55:41.059126Z",
       "stabilities": [
         "unstable"
       ],
@@ -60,13 +63,13 @@
       "description": "GNU Compiler Collection, version 15.2.0 (wrapper script)",
       "install_id": "gcc",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "gcc-wrapper-15.2.0",
       "pname": "gcc",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:34:27.444270Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T09:40:20.692034Z",
       "stabilities": [
         "unstable"
       ],
@@ -89,17 +92,17 @@
     {
       "attr_path": "gcc",
       "broken": false,
-      "derivation": "/nix/store/zcykg4v83r0w3w3389iq7bga3ywpf12l-gcc-wrapper-15.2.0.drv",
+      "derivation": "/nix/store/5di0jdzn9qqqcich8w9qbr5irz4dm8jh-gcc-wrapper-15.2.0.drv",
       "description": "GNU Compiler Collection, version 15.2.0 (wrapper script)",
       "install_id": "gcc",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "gcc-wrapper-15.2.0",
       "pname": "gcc",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:02:12.937058Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T10:24:48.212628Z",
       "stabilities": [
         "unstable"
       ],
@@ -125,13 +128,13 @@
       "description": "GNU Compiler Collection, version 15.2.0 (wrapper script)",
       "install_id": "gcc",
       "license": "GPL-3.0-or-later",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "gcc-wrapper-15.2.0",
       "pname": "gcc",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:32:52.649940Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T11:06:44.428049Z",
       "stabilities": [
         "unstable"
       ],
@@ -154,17 +157,17 @@
     {
       "attr_path": "python313Packages.greenlet",
       "broken": false,
-      "derivation": "/nix/store/j02jxjv8b10spzlqnysa5225ncswlhaj-python3.13-greenlet-3.3.0.drv",
+      "derivation": "/nix/store/z0vz4ma6zf387vadkk0lgwwcwxi87smk-python3.13-greenlet-3.3.0.drv",
       "description": "Module for lightweight in-process concurrent programming",
       "install_id": "greenlet",
       "license": "[ Python-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3.13-greenlet-3.3.0",
       "pname": "greenlet",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:06:49.675754Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T08:56:26.528826Z",
       "stabilities": [
         "unstable"
       ],
@@ -184,17 +187,17 @@
     {
       "attr_path": "python313Packages.greenlet",
       "broken": false,
-      "derivation": "/nix/store/zsslaz74ch6mksz48ah3pz3s6zw3snjs-python3.13-greenlet-3.3.0.drv",
+      "derivation": "/nix/store/gca30lswbhb0iaqqc1ab30l60qs26wm3-python3.13-greenlet-3.3.0.drv",
       "description": "Module for lightweight in-process concurrent programming",
       "install_id": "greenlet",
       "license": "[ Python-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3.13-greenlet-3.3.0",
       "pname": "greenlet",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:35:36.039210Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T09:41:28.143524Z",
       "stabilities": [
         "unstable"
       ],
@@ -214,17 +217,17 @@
     {
       "attr_path": "python313Packages.greenlet",
       "broken": false,
-      "derivation": "/nix/store/yy0ddq044dvdzaisk559z9qcf3zv3czx-python3.13-greenlet-3.3.0.drv",
+      "derivation": "/nix/store/a4n2wqbi3pza99i6ylwmlp40ncgrx1dz-python3.13-greenlet-3.3.0.drv",
       "description": "Module for lightweight in-process concurrent programming",
       "install_id": "greenlet",
       "license": "[ Python-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3.13-greenlet-3.3.0",
       "pname": "greenlet",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:02:58.634092Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T10:25:34.630735Z",
       "stabilities": [
         "unstable"
       ],
@@ -244,17 +247,17 @@
     {
       "attr_path": "python313Packages.greenlet",
       "broken": false,
-      "derivation": "/nix/store/p062ijkzykh2pyhcq1jhhbqlrsx2p8pi-python3.13-greenlet-3.3.0.drv",
+      "derivation": "/nix/store/b9j0h8pc7xbj7zswbnn56djs38f3nkir-python3.13-greenlet-3.3.0.drv",
       "description": "Module for lightweight in-process concurrent programming",
       "install_id": "greenlet",
       "license": "[ Python-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3.13-greenlet-3.3.0",
       "pname": "greenlet",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:34:01.188096Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T11:07:54.864227Z",
       "stabilities": [
         "unstable"
       ],
@@ -272,25 +275,148 @@
       "priority": 5
     },
     {
+      "attr_path": "python313Packages.numpy",
+      "broken": false,
+      "derivation": "/nix/store/1i2n1b5kssnnzch2mp38yjpd3cpn1cdy-python3.13-numpy-2.4.4.drv",
+      "description": "Scientific tools for Python",
+      "install_id": "numpy",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "python3.13-numpy-2.4.4",
+      "pname": "numpy",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T08:56:30.853600Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/sqhgdn5z6p2nmjlphs3x68953iz89nvi-python3.13-numpy-2.4.4-dist",
+        "out": "/nix/store/sp5142hsjf7169qbaz5aqk4sk6b62qiw-python3.13-numpy-2.4.4"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.numpy",
+      "broken": false,
+      "derivation": "/nix/store/bqybpldyc568xksk7zxqi92hv1wn8dxg-python3.13-numpy-2.4.4.drv",
+      "description": "Scientific tools for Python",
+      "install_id": "numpy",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "python3.13-numpy-2.4.4",
+      "pname": "numpy",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T09:41:33.566798Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.4",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/xji8qkj27vf2viqq30zyrrw0dal9pk5m-python3.13-numpy-2.4.4-dist",
+        "out": "/nix/store/43rxqnw011f85f6qwnd4jzgmifzfxaq8-python3.13-numpy-2.4.4"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.numpy",
+      "broken": false,
+      "derivation": "/nix/store/rrrsbiywnx63842ac14q07vn0y92b0z0-python3.13-numpy-2.4.4.drv",
+      "description": "Scientific tools for Python",
+      "install_id": "numpy",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "python3.13-numpy-2.4.4",
+      "pname": "numpy",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T10:25:39.009638Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.4",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/gqhdcd4p2hwsh4wn12spkzk1f20mar34-python3.13-numpy-2.4.4-dist",
+        "out": "/nix/store/cjvfmr94a16y5ha6xlpws3d54cxp0k69-python3.13-numpy-2.4.4"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "python313Packages.numpy",
+      "broken": false,
+      "derivation": "/nix/store/lza5n08fpdzgg0rilrz2xgsc6fysn90v-python3.13-numpy-2.4.4.drv",
+      "description": "Scientific tools for Python",
+      "install_id": "numpy",
+      "license": "BSD-3-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "python3.13-numpy-2.4.4",
+      "pname": "numpy",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T11:08:00.568653Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.4.4",
+      "outputs_to_install": [
+        "out",
+        "out"
+      ],
+      "outputs": {
+        "dist": "/nix/store/3wmy167jrryy19h6i6hnfbzy4j0ndkma-python3.13-numpy-2.4.4-dist",
+        "out": "/nix/store/l59n6vzkswz23y6s4pr6cmv2p4dpd5f0-python3.13-numpy-2.4.4"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
       "attr_path": "python313",
       "broken": false,
-      "derivation": "/nix/store/jvznzx6apcj5x15cnsw3hnamrflwxaq0-python3-3.13.13.drv",
+      "derivation": "/nix/store/bknb559vqzsgsrjz47gr6yfl8ivz60cs-python3-3.13.13.drv",
       "description": "High-level dynamically-typed programming language",
       "install_id": "python313",
       "license": "Python-2.0",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3-3.13.13",
       "pname": "python313",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:06:43.921309Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T08:56:20.816978Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
       "version": "python3-3.13.13",
       "outputs_to_install": [
+        "out",
         "out"
       ],
       "outputs": {
@@ -303,23 +429,24 @@
     {
       "attr_path": "python313",
       "broken": false,
-      "derivation": "/nix/store/cz7ch9rip1fkx6qlq9wbw4zzby6lm1ac-python3-3.13.13.drv",
+      "derivation": "/nix/store/x2hqw4p7ypn5mh08wgv4h37g6pqnw9ka-python3-3.13.13.drv",
       "description": "High-level dynamically-typed programming language",
       "install_id": "python313",
       "license": "Python-2.0",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3-3.13.13",
       "pname": "python313",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:35:28.552935Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T09:41:21.003915Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
       "version": "python3-3.13.13",
       "outputs_to_install": [
+        "out",
         "out",
         "out"
       ],
@@ -334,23 +461,24 @@
     {
       "attr_path": "python313",
       "broken": false,
-      "derivation": "/nix/store/i7jfaphjj1kr98vbh658bzci515d1m0z-python3-3.13.13.drv",
+      "derivation": "/nix/store/klsjr5grg2dlgbsimgczsz32s6h0s7ps-python3-3.13.13.drv",
       "description": "High-level dynamically-typed programming language",
       "install_id": "python313",
       "license": "Python-2.0",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3-3.13.13",
       "pname": "python313",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:02:52.894477Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T10:25:28.893138Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
       "version": "python3-3.13.13",
       "outputs_to_install": [
+        "out",
         "out"
       ],
       "outputs": {
@@ -363,23 +491,25 @@
     {
       "attr_path": "python313",
       "broken": false,
-      "derivation": "/nix/store/dhmlg234y19dv1bampr2ck9m3s7bzpn4-python3-3.13.13.drv",
+      "derivation": "/nix/store/3qs947by1lp93b4gnfisb3jx67mpkd3c-python3-3.13.13.drv",
       "description": "High-level dynamically-typed programming language",
       "install_id": "python313",
       "license": "Python-2.0",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
       "name": "python3-3.13.13",
       "pname": "python313",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:33:53.821386Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T11:07:47.316577Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
       "version": "python3-3.13.13",
       "outputs_to_install": [
+        "out",
+        "out",
         "out",
         "out",
         "out"
@@ -395,27 +525,27 @@
     {
       "attr_path": "uv",
       "broken": false,
-      "derivation": "/nix/store/5y5rxfnc7qr6l1lxiw8hxk4ily5y1x7c-uv-0.11.16.drv",
+      "derivation": "/nix/store/22vsisq4s1xlnyjar72dahn214qazgrs-uv-0.11.17.drv",
       "description": "Extremely fast Python package installer and resolver, written in Rust",
       "install_id": "uv",
       "license": "[ Apache-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "name": "uv-0.11.16",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "uv-0.11.17",
       "pname": "uv",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:08:36.367103Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T08:58:12.262413Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "0.11.16",
+      "version": "0.11.17",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/x4r8sci8i3yzdr7anhvbwgl1xjyvhgfr-uv-0.11.16"
+        "out": "/nix/store/vac3cff9gy7gwsc7fkvq6xam9y6pyfis-uv-0.11.17"
       },
       "system": "aarch64-darwin",
       "group": "toplevel",
@@ -424,27 +554,27 @@
     {
       "attr_path": "uv",
       "broken": false,
-      "derivation": "/nix/store/c5d3sgg376547nb1kmcbsk5fqags2kkv-uv-0.11.16.drv",
+      "derivation": "/nix/store/hdzdf6n49bn1c8c128j4lkr0572hpzvq-uv-0.11.17.drv",
       "description": "Extremely fast Python package installer and resolver, written in Rust",
       "install_id": "uv",
       "license": "[ Apache-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "name": "uv-0.11.16",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "uv-0.11.17",
       "pname": "uv",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T07:37:59.049235Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T09:43:43.500604Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "0.11.16",
+      "version": "0.11.17",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/9h1ajamiaj7zxq1v72zwdg486np93ck0-uv-0.11.16"
+        "out": "/nix/store/44ca5s53vkly9vz5rmb6f9m4v562ilqj-uv-0.11.17"
       },
       "system": "aarch64-linux",
       "group": "toplevel",
@@ -453,27 +583,27 @@
     {
       "attr_path": "uv",
       "broken": false,
-      "derivation": "/nix/store/xhy52zk3nvayg739rn8l1xrhxhmlnh45-uv-0.11.16.drv",
+      "derivation": "/nix/store/d1f6hcgmmw2jhnxsnc7p8rkia4mhrh18-uv-0.11.17.drv",
       "description": "Extremely fast Python package installer and resolver, written in Rust",
       "install_id": "uv",
       "license": "[ Apache-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "name": "uv-0.11.16",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "uv-0.11.17",
       "pname": "uv",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:04:45.509238Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T10:27:21.219538Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "0.11.16",
+      "version": "0.11.17",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/l9ns6x700j1yijay157jahy5kkixg4ka-uv-0.11.16"
+        "out": "/nix/store/qnird3c2xrh089mwjir4hb756awibiiz-uv-0.11.17"
       },
       "system": "x86_64-darwin",
       "group": "toplevel",
@@ -482,27 +612,27 @@
     {
       "attr_path": "uv",
       "broken": false,
-      "derivation": "/nix/store/friqv48zwcpmg2g2ag6aak5rgrj6sj2g-uv-0.11.16.drv",
+      "derivation": "/nix/store/b4aanngrkmr5djgw8gx4bzw0ngspm6m3-uv-0.11.17.drv",
       "description": "Extremely fast Python package installer and resolver, written in Rust",
       "install_id": "uv",
       "license": "[ Apache-2.0, MIT ]",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "name": "uv-0.11.16",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "name": "uv-0.11.17",
       "pname": "uv",
-      "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
-      "rev_count": 1004030,
-      "rev_date": "2026-05-23T18:24:25Z",
-      "scrape_date": "2026-05-26T08:36:20.802169Z",
+      "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+      "rev_count": 1008282,
+      "rev_date": "2026-05-31T16:09:29Z",
+      "scrape_date": "2026-06-02T11:10:16.229389Z",
       "stabilities": [
         "unstable"
       ],
       "unfree": false,
-      "version": "0.11.16",
+      "version": "0.11.17",
       "outputs_to_install": [
         "out"
       ],
       "outputs": {
-        "out": "/nix/store/hq1ygvwk5p6w6iyvfqfpvxbwjvi1b2cw-uv-0.11.16"
+        "out": "/nix/store/9yd6g2f18vlqqmj38rdgm3ih5q8022d4-uv-0.11.17"
       },
       "system": "x86_64-linux",
       "group": "toplevel",
