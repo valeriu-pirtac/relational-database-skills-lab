@@ -21,6 +21,7 @@ mindmap
       Transaction Isolation Levels
       Advanced Indexing
       Complex Data Types (JSONB, UUIDv7)
+      Table Partitioning
     SQLAlchemy & Application Layer
       Relationship Loading Strategies
       Async Session Management
@@ -62,6 +63,10 @@ A senior engineer designs schemas with execution plans, locking behavior, and ha
     - **JSONB vs. Structured Tables**: Knowing when to use **document storage vs. normalization** (indexing JSONB using GIN, JSONB path operations).
     - **UUIDs**: Storing UUIDv4 vs. sequential UUIDs (like UUIDv7) to prevent index fragmentation in high-throughput inserts.
     - **Range Types & Array Types**: Using specialized types for temporal or interval-based queries.
+- **Table Partitioning**:
+    - Splitting massive tables (billions of rows) horizontally using Declarative Partitioning (Range, List, Hash).
+    - Understanding how **Partition Pruning** drastically reduces sequential scan costs for timeseries data.
+    - Lifecycle management: dynamically attaching and detaching partitions without locking the parent table.
 
 > **IMPORTANT**
 >
