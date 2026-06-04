@@ -18,6 +18,7 @@ This lab provides hands-on mastery over **PostgreSQL Query Performance & Executi
 - **Differentiating Scan Strategies**: Explaining when and why Postgres uses Sequential scans, Index scans, Index Only scans, and Bitmap Heap scans.
 - **Evaluating Join Types**: Describing the performance profiles and memory constraints of Nested Loops, Hash Joins, and Merge Joins.
 - **Covering Indexes & Visibility Maps**: Designing indexes using the `INCLUDE` clause to achieve `Heap Fetches: 0` and describing how table updates and `VACUUM` heal the visibility map.
+- **Query Execution Engines & JIT**: Identifying when Just-In-Time compilation is active, understanding executor nodes, and evaluating whether JIT overhead hurts OLTP query latency.
 
 ---
 
@@ -48,6 +49,7 @@ relational-database-skills-lab/
         ├── lab_step_1.py          # Step 1: Scans & Shared Buffers Diagnostics
         ├── lab_step_2.py          # Step 2: Join Strategies Deep-Dive (Nested Loop, Hash, Merge)
         ├── lab_step_3.py          # Step 3: Covering Indexes & Visibility Map Egress
+        ├── lab_step_4.py          # Step 4: Query Execution Engines & JIT Compilation
         └── README.md              # Lab workbook (This file)
 ```
 
@@ -117,6 +119,14 @@ sequenceDiagram
     Developer->>DB: Run VACUUM customers
     Developer->>DB: SELECT id, status
     DB-->>Developer: Return plan (Index Only Scan, Heap Fetches: 0)
+
+    Note over Developer,DB: Step 4: Execution Engines & JIT
+    Developer->>Planner: SET jit = on, jit_above_cost = 10
+    Developer->>DB: Query Heavy Aggregation
+    DB-->>Developer: Return plan (JIT active, high planning time)
+    Developer->>Planner: SET jit = off
+    Developer->>DB: Query Heavy Aggregation
+    DB-->>Developer: Return plan (JIT disabled, faster total execution for OLTP)
 ```
 
 ---
@@ -221,6 +231,34 @@ python labs/008-explain-analyze-buffers/lab_step_3.py
 
 ---
 
+### Step 4: Query Execution Engines & JIT Compilation
+
+#### 📘 Step 4 Theory: The Postgres Executor and JIT
+
+PostgreSQL uses a cost-based optimizer to generate an execution plan, which is a tree of **Plan Nodes** (e.g., `Hash Join`, `Seq Scan`, `Aggregate`). The **Query Execution Engine** processes this tree recursively, pulling rows up from the bottom leaf nodes to the top.
+
+In PostgreSQL 11 and later, a feature called **Just-In-Time (JIT) Compilation** was introduced (enabled by default in PG 12+). JIT uses LLVM to compile expressions (like `WHERE a + b > 10`) and tuple deforming operations directly into native machine code at runtime.
+
+##### JIT Benefits & Hazards:
+*   **Benefits**: For long-running analytical (OLAP) queries processing millions of rows, JIT can significantly speed up execution by eliminating CPU overhead from interpreting expressions.
+*   **Hazards**: Compiling the query into machine code takes time (often milliseconds or more). For typical OLTP (Online Transaction Processing) queries that should finish in < 1ms, JIT compilation can take longer than the query execution itself! This adds massive overhead.
+
+PostgreSQL controls JIT using cost thresholds (e.g., `jit_above_cost`). If the planner estimates the query cost exceeds the threshold, it invokes JIT. Sometimes, the planner overestimates cost, triggering JIT for simple queries and destroying performance.
+
+#### 🧪 Step 4 Lab Execution
+
+Run the automated script to observe JIT overhead on a medium-complexity aggregation:
+
+```bash
+python labs/008-explain-analyze-buffers/lab_step_4.py
+```
+
+> **Observe**: 
+> *   **Test 1 (JIT Forced ON)**: By lowering `jit_above_cost`, we force JIT to activate. Look at the bottom of the EXPLAIN output for `JIT:` stats (`Functions`, `Options`, `Timing`). Notice how much time is spent on `Generation` and `Inlining`.
+> *   **Test 2 (JIT Disabled)**: Setting `jit = off` bypasses the LLVM compiler. The standard executor processes the query natively. Notice that the total time (Planning + Execution) is often faster without JIT for queries of this size.
+
+---
+
 ## 🎯 Lab Outcomes & Verification Checklist
 
 To successfully complete this lab, you must produce and verify the following results:
@@ -228,7 +266,8 @@ To successfully complete this lab, you must produce and verify the following res
 - [ ] **Step 1 Execution**: Run `lab_step_1.py` and verify `Seq Scan` shifts to `Index Scan` with buffer cache hits replacing disk reads.
 - [ ] **Step 2 Execution**: Run `lab_step_2.py` and compare the cost and latency profiles of Hash Join, forced Nested Loop, and forced Merge Join.
 - [ ] **Step 3 Execution**: Run `lab_step_3.py` and demonstrate covering indexes, dirty page heap fetches, and `VACUUM` Visibility Map healing.
-- [ ] **Type & Quality Checks**: Run `make check` from the project root and verify all Ruff, formatting, and strict Mypy checks pass perfectly.
+- [ ] **Step 4 Execution**: Run `lab_step_4.py` and observe the overhead introduced by JIT compilation on an OLTP-scale aggregation.
+
 
 When you are finished with your local experiment, tear down your sandbox:
 
@@ -246,6 +285,7 @@ Formulate answers to these production-level questions based on your observations
 2. **What is the difference between `Planning Time` and `Execution Time` in an EXPLAIN ANALYZE plan? In what scenarios (e.g. dynamic queries, partition pruning) might `Planning Time` exceed `Execution Time`?**
 3. **If a Hash Join spills to disk (indicated by `temp read` and `temp write` in execution logs), what PostgreSQL parameter should you adjust, and what are the system-wide memory tradeoffs?**
 4. **Why is `VACUUM` essential for maintaining the performance of `Index Only Scans` on write-heavy tables? What happens if autovacuum is turned off or severely throttled?**
+5. **In what specific scenarios would JIT compilation be highly beneficial, and why does it often degrade performance for simple OLTP queries?**
 
 ---
 
